@@ -73,22 +73,27 @@ ul.navigation li{
     padding: 0 5% 0 5%;
 }
 
-nav.canciones {
-    display:flex;
+nav div{
+    
     justify-content: space-between;
-    margin: auto;
+    margin: left;
+    width: 180px;
+    height: 200px;
 }
 
-nav.canciones div img {
+div img {
     width: 150px;
     height: 130px;
 }
-nav.canciones div {
-    width: 180px;
-    height: 200px;
-    
-}
-nav.canciones div a {
-    color:black;
+   
+div a {
+    color: black;
     text-decoration: none;
+}
+.displayflex {
+display: flex;
+}
+
+h3 {
+    text-align: left;
 }
