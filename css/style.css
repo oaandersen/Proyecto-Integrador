@@ -1,3 +1,71 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color: rgba(85, 85, 129, 0.377);
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display: flex;
+    max-width: 95%;
+    margin: 2.5%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ul{
+    display: flex;
+    max-width: 50%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.navigation li{
+    font-size: 170%;
+}
+
+.busqcontain{
+    justify-content: right;
+    max-width: 20%;
+}
+
+.form-busq{
+    justify-content: flex-end;
+    border-bottom: solid 1.5px rgb(19, 19, 131);
+    display: flex;
+    padding: 5px;
+    background-color: none;
+}
+
+input, button{
+    border: none;
+    background-color: transparent;
+}
+
+input{
+    max-width: 85%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    color: rgb(19, 19, 131);
+}
+
+ul.navigation li a{
+    color: rgb(19, 19, 131);
+}
+
+ul.navigation li{
+    padding: 0 5% 0 5%;
+}
+
