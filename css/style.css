@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -69,3 +73,22 @@ ul.navigation li{
     padding: 0 5% 0 5%;
 }
 
+nav.canciones {
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav.canciones div img {
+    width: 150px;
+    height: 130px;
+}
+nav.canciones div {
+    width: 180px;
+    height: 200px;
+    
+}
+nav.canciones div a {
+    color:black;
+    text-decoration: none;
+}
