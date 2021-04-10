@@ -74,7 +74,7 @@ ul.navigation li{
     padding: 0 5% 0 5%;
 }
 
-nav.canciones{
+.canciones{
     display: flex;
     max-width: 95%;
     margin: 2.5%;
@@ -82,26 +82,28 @@ nav.canciones{
     justify-content: flex-end;
 }
 
-nav div{
+.structure{
     justify-content: space-between;
     margin: left;
     width: 180px;
     height: 200px;
 }
 
-div img {
+.img {
     width: 150px;
     height: 130px;
 }
    
-div a {
+.decoration {
     color: black;
     text-decoration: none;
 }
 .displayflex {
 display: flex;
 }
-
-h3 {
+.titulos1 {
+text-align: left;
+}
+.titulos2 {
     text-align: left;
 }
