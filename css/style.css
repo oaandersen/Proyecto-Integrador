@@ -22,20 +22,21 @@ header nav ul li a{
 nav{
     display: flex;
     max-width: 95%;
-    margin: 2.5%;
+    margin: 2.5% auto;
     align-items: center;
     justify-content: flex-end;
 }
 
-ul{
+ul.navigation{
     display: flex;
     max-width: 50%;
     margin-left: 15%;
     margin-right: 15%;
+    justify-content: flex-start;
 }
 
 ul.navigation li{
-    font-size: 170%;
+    font-size: 150%;
 }
 
 .busqcontain{
@@ -73,8 +74,15 @@ ul.navigation li{
     padding: 0 5% 0 5%;
 }
 
+nav.canciones{
+    display: flex;
+    max-width: 95%;
+    margin: 2.5%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 nav div{
-    
     justify-content: space-between;
     margin: left;
     width: 180px;
