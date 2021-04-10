@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+img{
+    width:50%;
+}
+div{
+    flex-wrap: wrap;
+    width: auto;
+}
+.menunav{
+    display: flex;
+    min-width: 95%;
+    margin: 2.5% auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navigation{
+    display: flex;
+    max-width: 50%;
+    margin-left: 15%;
+    margin-right: 15%;
+    justify-content: flex-start;
+}
+.decoration {
+    color: black;
+    text-decoration: none;
+}
+.busqcontain{
+    justify-content: right;
+    max-width: 20%;
+}
+.form-busq{
+    justify-content: flex-end;
+    border-bottom: solid 1.5px rgb(19, 19, 131);
+    display: flex;
+    padding: 5px;
+    background-color: none;
+}
+li{
+    list-style: none;
+}
+header{
+    background-color: rgba(85, 85, 129, 0.377);
+}

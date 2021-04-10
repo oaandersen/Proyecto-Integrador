@@ -13,15 +13,9 @@ li{
 header{
     background-color: rgba(85, 85, 129, 0.377);
 }
-
-header nav ul li a{
-    text-decoration: none;
-    color: black;
-}
-
-nav{
+.menunav{
     display: flex;
-    max-width: 95%;
+    min-width: 95%;
     margin: 2.5% auto;
     align-items: center;
     justify-content: flex-end;
@@ -84,14 +78,15 @@ ul.navigation li{
 
 .structure{
     justify-content: space-between;
-    margin: left;
-    width: 180px;
-    height: 200px;
+    margin: 0 auto;
+    min-width: 5px;
+    min-height: 10px;
+
 }
 
 .img {
-    width: 150px;
-    height: 130px;
+    width: 80px;
+    height: 100px;
 }
    
 .decoration {
@@ -100,10 +95,13 @@ ul.navigation li{
 }
 .displayflex {
 display: flex;
+min-width: 20%;
 }
 .titulos1 {
 text-align: left;
+font-size: 100%;
 }
 .titulos2 {
     text-align: left;
+    font-size: 80%;
 }
