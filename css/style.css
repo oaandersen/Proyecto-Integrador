@@ -105,3 +105,17 @@ font-size: 100%;
     text-align: left;
     font-size: 80%;
 }
+
+.tituloplaylist  {
+        text-align: center;
+        color: rgb(107, 161, 164);
+    }
+    .medioplaylist {display: grid;
+        gap: 45px;
+         padding: 40px;
+
+    }
+    .cuadrocancionesf {padding: 10px;
+        text-align: left;color: honeydew; background-color: #2a2828d9;
+        box-sizing: content-box; border-radius: 10px; height: 100%; width: 100%;}
+    .
