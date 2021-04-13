@@ -11,20 +11,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="index">
     <header>
         <nav class="menunav">
-            <ul class="navigation">
-                <li><a href="#" class="decoration">HOME</a></li>
-                <li><a href="playlist.html" class="decoration">PLAYLIST</a></li>
-                <li><a href="" class="decoration">GÉNEROS</a></li>
-            </ul>
-            <div class="busqcontain">
-                <form class="form-busq">
-                    <input type="text" placeholder="BUSCAR">
-                    <button><i class="fas fa-search"></i></button>
-                </form>
-            </div>    
+            <h2>M</h2>
+            <div class="navcontent">
+                
+                <div id="toggle">
+                    <input type="checkbox" id="barras" value="" aria-checked="false">
+                    <label for="barras" class="boton"><i class="fas fa-bars" ></i></label>
+                    <ul class="navigation">
+                        <li><a class="movimiento" href="index.html" class="decoration">HOME</a></li>
+                        <li><a href="playlist.html" class="decoration">PLAYLIST</a></li>
+                        <li><a href="" class="decoration">GÉNEROS</a></li>
+                    </ul>
+                </div>
+            
+                <div class="busqcontain">
+                    <form class="form-busq">
+                        <input type="text" name="buscador" value="" placeholder="buscar">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
         </nav>
     </header>
     
