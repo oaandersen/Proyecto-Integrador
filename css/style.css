@@ -4,6 +4,9 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/imagebg.png);
+    background-size: contain;
+    background-repeat: repeat-y;
 }
 
 li{
@@ -16,7 +19,7 @@ form.form-busq{
 
 nav.menunav{
     display: flex;
-    background-color: rgb(22, 0, 117);
+    background-color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
     align-items: center;
@@ -38,11 +41,12 @@ ul.navigation{
     font-size: 70%;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    background-color: rgb(11, 0, 59);
+    width: 80%;
+    background-color: rgb(0, 0, 0);
     left: -100%;
     transition: all .5s;
     position:fixed;
+    top: 40px;
 }
 
 
@@ -77,6 +81,7 @@ div#toggle{
 }
 
 #barras{
+    display: none;
 }
 
 a.movimiento, a:hover{
@@ -86,10 +91,11 @@ a.movimiento, a:hover{
 
 div.busqcontain{
     display: flex;
-    max-width: 35%;
+    max-width: 100px;
     align-items: center;
     font-size: 130%;
-    margin-left: 25%;
+    margin-left: 15%;
+    margin-right: 0;
 }
 
 .navcontent{
@@ -118,21 +124,66 @@ button i{
     color: rgb(255,255,255)
 }
 
+div.footer{
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-grow: 0;
+}
+
+ul.ulfoot{
+    display: flex;
+    font-size: 60%;
+    justify-content: space-between;
+}
+
+.ulfoot li{
+    margin: 0 10px
+}
+
+.ulfoot li a{
+    color: white;
+    text-decoration: none;
+}
+
+.titulos1{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 2%;
+    text-transform: uppercase;
+}
+
 .canciones{
     display: flex;
     max-width: 95%;
-    margin: 2.5%;
     align-items: center;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .structure{
     justify-content: space-between;
-    margin: 0 auto;
-    min-width: 5px;
-    min-height: 10px;
-
+    margin: 5% auto;
+    display: flex;
+    border: solid 2px rgb(0, 0, 0);
+    padding: 3%;
+    background-color: rgb(214, 193, 0);
+    align-items: center;
 }
+
+.structure img{
+    width: 40%;
+    height: 40%;
+    border-radius: 100%;
+}
+
+.structure h3, .structure h5{
+    border-top: double 5px black;
+    border-bottom: double 5px black;
+} 
 
 .img {
     width: 80px;
@@ -175,7 +226,7 @@ font-size: 100%;
     ul.navigation li{ display: block;}
     div#toggle i{display: none;}
     ul.navigation{
-        background-color: rgb(22, 0, 117);
+        background-color: rgb(0, 0, 0);
         left: 0;
         transition: none;
         width: 60%;

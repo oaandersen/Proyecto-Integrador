@@ -3,22 +3,35 @@
 
 <head lang="es">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de la Página - Playlist</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
         <nav class="menunav">
-            <ul class="navigation">
-                <li><a href="index.html" class="decoration">HOME</a></li>
-                <li><a href="playlist.html" class="decoration">PLAYLIST</a></li>
-                <li><a href="" class="decoration">GÉNEROS</a></li>
-            </ul>
-            <div class="busqcontain">
-                <form class="form-busq">
-                    <input type="text" placeholder="BUSCAR">
-                    <button><i class="fas fa-search"></i></button>
-                </form>
+            <h2>M</h2>
+            <div class="navcontent">
+                
+                <div id="toggle">
+                    <input type="checkbox" id="barras" value="" aria-checked="false">
+                    <label for="barras" class="boton"><i class="fas fa-bars" ></i></label>
+                    <ul class="navigation">
+                        <li><a class="movimiento" href="index.html" class="decoration">HOME</a></li>
+                        <li><a href="playlist.html" class="decoration">PLAYLIST</a></li>
+                        <li><a href="genres.html" class="decoration">GÉNEROS</a></li>
+                    </ul>
+                </div>
+            
+                <div class="busqcontain">
+                    <form class="form-busq">
+                        <input type="text" name="buscador" value="" placeholder="buscar">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
             </div>
         </nav>
     </header>
