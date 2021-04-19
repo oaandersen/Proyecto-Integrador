@@ -224,6 +224,7 @@ font-size: 100%;
         background-color: #2a2828d9;
         box-sizing: content-box;
          border-radius: 10px; height: 100%; width: 100%;
+         background-image: url(../img/fotarda.jpg);
         
         }
     .titulos-medio-playlist
@@ -299,4 +300,11 @@ font-size: 100%;
 .columnas-rdb
 {
     background-color: #eee6;
+}
+.links-cancionesfav
+{
+    background-color: #ffffffba;
+    text-decoration: none; 
+    border-bottom: double 5px black;  
+    color: black;
 }
