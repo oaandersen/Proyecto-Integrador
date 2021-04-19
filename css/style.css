@@ -5,8 +5,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-image: url(../img/imagebg.png);
-    background-size: contain;
-    background-repeat: repeat-y;
+    
 }
 
 li{
@@ -244,4 +243,46 @@ font-size: 100%;
     }
     #barras{display: none;}
     nav.menunav h2{margin-right: 10%;}
+}
+.resultados-chart
+{ 
+    display: flex;
+    flex-direction: initial;
+    justify-content: center;
+    text-align-last: center;
+    gap: 180px;
+    background-image: url(../img/fotarda.jpg);
+    border-radius: 13px;
+    
+
+}
+.titulos-chart-rdb
+{
+    color:black;
+    border-top: double 5px black;
+    border-bottom: double 5px black;
+    text-align-last: center;
+    border-radius: 13px;
+
+}
+.titulo-rdb{
+    color: white;
+    background-color: #000000de;
+    padding: 1%;
+    border-radius: 13px;
+}
+
+.linksrdb{
+    border-bottom: double 5px black;
+    text-decoration: none;
+    color: black;
+ 
+}
+.divlinks-rdb
+{
+    padding: 11px;
+}
+.columnas-rdb
+{
+    background-color: #eee6;
 }
