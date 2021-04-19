@@ -207,17 +207,30 @@ font-size: 100%;
 }
 
 .tituloplaylist  {
-        text-align: center;
-        color: rgb(107, 161, 164);
+    color: white;
+    background-color: #000000de;
+    padding: 1%;
+    border-radius: 13px;
+    font-size: 150%;
     }
     .medioplaylist {display: grid;
         gap: 45px;
-         padding: 40px;
+         padding: 40px; 
+         
 
     }
     .cuadrocancionesf {padding: 10px;
-        text-align: left;color: honeydew; background-color: #2a2828d9;
-        box-sizing: content-box; border-radius: 10px; height: 100%; width: 100%;}
+        text-align: left; 
+        background-color: #2a2828d9;
+        box-sizing: content-box;
+         border-radius: 10px; height: 100%; width: 100%;
+        
+        }
+    .titulos-medio-playlist
+    {
+        color: honeydew;
+        
+    }
     
 
 @media (min-width: 720px) {
@@ -259,8 +272,8 @@ font-size: 100%;
 .titulos-chart-rdb
 {
     color:black;
-    border-top: double 5px black;
-    border-bottom: double 5px black;
+    border-top: double 5px #eeeeeea3;
+    border-bottom: double 5px #eeeeeea3;
     text-align-last: center;
     border-radius: 13px;
 
@@ -270,6 +283,7 @@ font-size: 100%;
     background-color: #000000de;
     padding: 1%;
     border-radius: 13px;
+    font-size: 150%;
 }
 
 .linksrdb{
