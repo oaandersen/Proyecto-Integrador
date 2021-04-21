@@ -25,11 +25,11 @@ nav.menunav{
 }
 
 nav.menunav h2{
-    color: rgb(255,255,255);
+    color: rgb(214,193,0);
     padding: 2px;
     margin: 20px 20px 20px 10px;
-    border: solid 2px rgb(255,255,255);
-    border-radius: 20%;
+    border: solid 2px rgb(214, 193, 0);
+    border-radius: 10%;
 }
 
 ul.navigation{
@@ -156,7 +156,6 @@ ul.ulfoot{
 }
 
 .canciones{
-    display: flex;
     max-width: 95%;
     align-items: center;
     justify-content: flex-end;
@@ -233,34 +232,8 @@ font-size: 100%;
         
     }
     
-
-@media (min-width: 720px) {
-    nav.menunav{height:60px; justify-content: flex-end;}
-    ul.navigation li{ display: block;}
-    div#toggle i{display: none;}
-    ul.navigation{
-        background-color: rgb(0, 0, 0);
-        left: 0;
-        transition: none;
-        width: 60%;
-        margin-left: 10%;
-        font-size: 120%;
-        position: initial;
-        justify-content: space-evenly;
-    }
-    div.busqcontain{
-        font-size: 200%;
-        margin-right: 15%;
-    }
-    form.form-busq button{
-        font-size: 80%;
-    }
-    #barras{display: none;}
-    nav.menunav h2{margin-right: 10%;}
-}
 .resultados-chart
 { 
-    display: flex;
     flex-direction: initial;
     justify-content: center;
     text-align-last: center;
@@ -307,4 +280,63 @@ font-size: 100%;
     text-decoration: none; 
     border-bottom: double 5px black;  
     color: black;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 720px) {
+    nav.menunav{height:60px; justify-content: flex-end;}
+    ul.navigation li{ display: block;}
+    div#toggle i{display: none;}
+    ul.navigation{
+        background-color: rgb(0, 0, 0);
+        left: 0;
+        transition: none;
+        width: 60%;
+        margin-left: 10%;
+        font-size: 120%;
+        position: initial;
+        justify-content: space-evenly;
+    }
+    div.busqcontain{
+        font-size: 200%;
+        margin-right: 15%;
+    }
+    form.form-busq button{
+        font-size: 80%;
+    }
+    #barras{display: none;}
+    nav.menunav h2{margin-right: 10%;}
+
+    
+    section.articles{
+        display: flex;
+        gap: 1%;
+        margin-top: -30px;
+    }
+    .structure{
+        max-width: 20%;
+        display: block;
+    }
+
+    .structure img{
+        width: 100px;
+        height: 100px;
+    }
+
+    div.footer{height: 60px;}
+    
+    ul.ulfoot li a{
+        font-size: 30px;
+        margin: 40px;
+    }
+
+    .resultados-chart{
+        display: flex,}
+    
 }

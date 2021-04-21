@@ -1,54 +1,157 @@
 *{
     box-sizing: border-box;
 }
-a{
-    color: black;
-    text-decoration: none;
+
+body{
+    background-image: url(../img/imagebg.png);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
-div{
-    flex-wrap: wrap;
-    width: auto;
+
+form.form-busq{
+    margin-right: -100px;
 }
-.menunav{
+
+nav.menunav{
     display: flex;
-    min-width: 95%;
-    margin: 2.5% auto;
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100%;
     align-items: center;
-    justify-content: flex-end;
 }
-.navigation{
+
+nav.menunav h2{
+    color: rgb(214,193,0);
+    padding: 2px;
+    margin: 20px 20px 20px 10px;
+    border: solid 2px rgb(214, 193, 0);
+    border-radius: 10%;
+}
+
+ul.navigation{
     display: flex;
-    max-width: 50%;
-    margin-left: 15%;
-    margin-right: 15%;
+}
+
+ul.navigation{
+    font-size: 70%;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    left: -100%;
+    transition: all .5s;
+    position:fixed;
+    top: 40px;
+}
+
+
+
+#barras:checked ~ ul{
+    left: 0;
+    display: flex;
+}
+
+ul.navigation li{
+    padding: 0 1.5%;
+    text-transform: lowercase;
+    display: block;
+    margin: 5%;
+}
+
+ul.navigation li a{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 140%;
+}
+
+div#toggle{
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
 }
-.decoration {
-    color: black;
+
+.boton{
+    font-size: 140%;
+    color: white;
+}
+
+#barras{
+    display: none;
+}
+
+a.movimiento, a:hover{
+    transition: .5s;
     text-decoration: none;
 }
-.busqcontain{
-    justify-content: right;
-    max-width: 20%;
-}
-.form-busq{
-    justify-content: flex-end;
-    border-bottom: solid 1.5px rgb(19, 19, 131);
+
+div.busqcontain{
     display: flex;
-    padding: 5px;
-    background-color: none;
+    max-width: 100px;
+    align-items: center;
+    font-size: 130%;
+    margin-left: 15%;
+    margin-right: 0;
 }
-li{
-    list-style: none;
-font-size: 100%;
-text-indent: -30px;
+
+.navcontent{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
-header{
-    background-color: rgba(85, 85, 129, 0.377);
+
+input{
+    max-width: 35%;
+    font-size: 70%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgb(255, 255, 255);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button i{
+    font-size: 70%;
+    color: rgb(255,255,255)
+}
+
+div.footer{
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-grow: 0;
+}
+
+ul.ulfoot{
+    display: flex;
+    font-size: 60%;
+    justify-content: space-between;
+}
+
+.ulfoot li{
+    margin: 0 10px
+}
+
+.ulfoot li a{
+    color: white;
+    text-decoration: none;
+}
+
+a{text-decoration: none;}
+
+
+
 .artistasimg {
     width:100%
 }
 .img {
     width:80%;
 }
+
