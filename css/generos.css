@@ -1,6 +1,131 @@
 *{
     box-sizing: border-box;
 }
+
+body{
+    background-image: url(../img/imagebg.png);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 5px;
+}
+
+form.form-busq{
+    margin-right: -100px;
+}
+
+nav.menunav{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+nav.menunav h2{
+    color: rgb(214,193,0);
+    padding: 2px;
+    margin: 20px 20px 20px 10px;
+    border: solid 2px rgb(214, 193, 0);
+    border-radius: 10%;
+}
+
+ul.navigation{
+    display: flex;
+}
+
+ul.navigation{
+    font-size: 70%;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    left: -100%;
+    transition: all .5s;
+    position:fixed;
+    top: 40px;
+}
+
+
+
+#barras:checked ~ ul{
+    left: 0;
+    display: flex;
+}
+
+ul.navigation li{
+    padding: 0 1.5%;
+    text-transform: lowercase;
+    display: block;
+    margin: 5%;
+}
+
+ul.navigation li a{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 140%;
+}
+
+div#toggle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.boton{
+    font-size: 140%;
+    color: white;
+}
+
+#barras{
+    display: none;
+}
+
+a.movimiento, a:hover{
+    transition: .5s;
+    text-decoration: none;
+}
+
+div.busqcontain{
+    display: flex;
+    max-width: 100px;
+    align-items: center;
+    font-size: 130%;
+    margin-left: 15%;
+    margin-right: 0;
+}
+
+.navcontent{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+input{
+    max-width: 35%;
+    font-size: 70%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgb(255, 255, 255);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button i{
+    font-size: 70%;
+    color: rgb(255,255,255)
+}
+
 a{
     color: black;
     text-decoration: none;
@@ -21,7 +146,105 @@ h1 {
 li{
     list-style: none;
     text-indent: -30px;
+    background-color: black;
+    color: white;
 }
 .img {
     width:30%;
+}
+
+.genresvariados{
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+div.footer{
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-grow: 0;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+div.footer ul.ulfoot{
+    list-style-type: none;
+}
+
+footer#footerdetail{
+    position: unset;
+    margin-top: 20px;
+}
+
+
+
+
+ul.ulfoot{
+    display: flex;
+    font-size: 60%;
+    justify-content: space-between;
+}
+
+.ulfoot li{
+    margin: 0 15px;
+    
+}
+
+.ulfoot li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media (min-width: 720px){
+    nav.menunav{height:60px; justify-content: flex-end;}
+    ul.navigation li{ display: block;}
+    div#toggle i{display: none;}
+    ul.navigation{
+        background-color: rgb(0, 0, 0);
+        left: 0;
+        transition: none;
+        width: 60%;
+        margin-left: 10%;
+        font-size: 120%;
+        position: initial;
+        justify-content: space-evenly;
+    }
+    div.busqcontain{
+        font-size: 200%;
+        margin-right: 15%;
+    }
+    form.form-busq button{
+        font-size: 80%;
+    }
+    #barras{display: none;}
+    nav.menunav h2{margin-right: 10%;}
+    
+    div.footer{height: 60px;}
+    
+    ul.ulfoot li a{
+        font-size: 30px;
+        margin: 40px;
+    }
+
+    .displaygendetail{
+        display: flex;
+        width: 100%;
+    }
+
+    .genresvariados{
+        margin: 10px;
+        width: 20%;
+    }
+
+    .genresvariados img{
+        height: 150px;
+    }
 }
