@@ -7,6 +7,8 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.busqcontain{text-align: left;}
+
 .title{
     background-color: black;
     color: white;
@@ -183,9 +185,6 @@ footer#footerdetail{
     margin-top: 20px;
 }
 
-
-
-
 ul.ulfoot{
     display: flex;
     font-size: 60%;
@@ -193,8 +192,11 @@ ul.ulfoot{
 }
 
 .ulfoot li{
-    margin: 0 15px;
-    
+    margin: 0 18px;
+}
+
+.phone{
+    margin-left: 10px;
 }
 
 .ulfoot li a{
