@@ -188,22 +188,22 @@ div.detailsongs a{color: rgb(0, 0, 0);}
 }
 
 .detailartist{
-    background-color: rgba(179, 179, 179, 0.582);
-    color: rgb(0, 0, 0);
+    background-color: rgba(5, 4, 4, 0.796);
+    color: rgba(255, 255, 255, 0.809);
     border-radius: 35px;
     padding: 10px;
     margin: 15px;
 }
 
 .detailalbum{
-    background-color: rgba(179, 179, 179, 0.582);
-    color: rgb(0, 0, 0);
+    background-color: rgba(5, 4, 4, 0.796);
+    color: rgba(255, 255, 255, 0.809);
     border-radius: 35px;
     padding: 10px;
     margin: 15px;
 }
 
-.detailalbum a{color: black;}
+.detailalbum a{color: white;}
 .detailalbum ul li, p{
     font-weight: 700;
 }
@@ -247,11 +247,21 @@ div.detailsongs a{color: rgb(0, 0, 0);}
         margin: 40px;
     }
 
-    nav{width: 40%;}
-    div.detailsongs{height: 100%;}
+    nav {
+        width: 40%;
+    }
+    div.detailsongs{
+        height: 100%;
+    }
 
-    nav.detaildisplay{display: flex; width: 100%;}
-    div.detailartist{width: 25%;}
+    nav.detaildisplay{
+        display: flex; width: 100%;
+        
+    }
+    div.detailartist{
+        width: 25%;
+        
+    }
     div.detailartist img{width: 100%; height: 60%;}
 
     .album{display: flex; width: 100%;}
