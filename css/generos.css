@@ -219,6 +219,11 @@ ul.ulfoot{
         position: initial;
         justify-content: space-evenly;
     }
+
+    ul.navigation li{
+        margin: 0 30px;
+    }
+
     div.busqcontain{
         font-size: 200%;
         margin-right: 15%;
