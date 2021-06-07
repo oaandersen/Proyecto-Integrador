@@ -6,14 +6,15 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-image: url(../img/imagebg.png);
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
+
+h1, h2, h3{font-size: 10px;}
 
 li{
     list-style: none;
-}
-
-form.form-busq{
-    margin-right: -100px;
 }
 
 nav.menunav{
@@ -65,17 +66,17 @@ ul.navigation li{
 ul.navigation li a{
     color: rgb(255, 255, 255);
     font-weight: 500;
-    font-size: 140%;
+    font-size: 100%;
 }
 
-div#toggle{
+article#toggle{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
 .boton{
-    font-size: 140%;
+    font-size: 100%;
     color: white;
 }
 
@@ -88,11 +89,11 @@ a.movimiento, a:hover{
     text-decoration: none;
 }
 
-div.busqcontain{
+article.busqcontain{
     display: flex;
     max-width: 100px;
     align-items: center;
-    font-size: 130%;
+    font-size: 100%;
     margin-left: 15%;
     margin-right: 0;
 }
@@ -123,7 +124,7 @@ button i{
     color: rgb(255,255,255)
 }
 
-div.footer{
+article.footer{
     background-color: rgb(0, 0, 0);
     margin-bottom: 0%;
     height: 40px;
@@ -165,8 +166,12 @@ ul.ulfoot{
     text-transform: uppercase;
 }
 
+
+
+
+
 .canciones{
-    max-width: 95%;
+    max-width: 90%;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
@@ -183,8 +188,6 @@ ul.ulfoot{
 }
 
 .structure img{
-    width: 40%;
-    height: 40%;
     border-radius: 100%;
 }
 
@@ -194,18 +197,19 @@ ul.ulfoot{
 } 
 
 .img {
-    width: 80px;
-    height: 100px;
+    height: 80px;
 }
    
 .decoration {
     color: black;
     text-decoration: none;
 }
+
 .displayflex {
 display: flex;
 min-width: 20%;
 }
+
 .titulos1 {
 text-align: left;
 font-size: 100%;
@@ -220,7 +224,7 @@ font-size: 100%;
     background-color: #000000de;
     padding: 1%;
     border-radius: 13px;
-    font-size: 150%;
+    font-size: 100%;
     }
     .medioplaylist {display: grid;
         gap: 45px;
@@ -304,14 +308,69 @@ font-size: 100%;
     height: 200px;
 }
 
+a{text-decoration: none;}
+
+.detailsongs{
+    background-color: rgba(179, 179, 179, 0.582);
+    color: rgb(0, 0, 0);
+    border-radius: 35px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.detailsongs audio{
+    max-width: 100%;
+    
+}
+
+
+div.detailsongs a{color: rgb(0, 0, 0);}
+
+.artistasimg {
+    width:100%;
+}
+.sectionAlbum .img {
+    width:100%;
+    height: unset;
+}
+
+.detailartist{
+    background-color: rgba(5, 4, 4, 0.796);
+    color: rgba(255, 255, 255, 0.809);
+    border-radius: 35px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.detailalbum{
+    background-color: rgba(5, 4, 4, 0.796);
+    color: rgba(255, 255, 255, 0.809);
+    border-radius: 35px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.detailalbum a{color: white;}
+.detailalbum ul li, p{
+    font-weight: 700;
+}
+
+footer{
+    position: absolute;
+    bottom: auto;
+}
 
 
 
 
 @media (min-width: 720px) {
-    nav.menunav{height:60px; justify-content: flex-end;}
+    body{width: 100%;}
+    nav.menunav{height:60px; justify-content: flex-start;}
+    nav.menunav h2{font-size: 150%;}
+    article.busqcontain{padding: 10%}
     ul.navigation li{ display: block;}
-    div#toggle i{display: none;}
+    ul.navigation li i{color: white;}
+    article#toggle i{display: none;}
     ul.navigation{
         background-color: rgb(0, 0, 0);
         left: 0;
@@ -322,7 +381,7 @@ font-size: 100%;
         position: initial;
         justify-content: space-evenly;
     }
-    div.busqcontain{
+    article.busqcontain{
         font-size: 200%;
         margin-right: 15%;
     }
@@ -348,7 +407,7 @@ font-size: 100%;
         height: 100px;
     }
 
-    div.footer{height: 60px;}
+    article.footer{height: 60px;}
     
     ul.ulfoot li a{
         font-size: 30px;
