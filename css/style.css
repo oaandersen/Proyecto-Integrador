@@ -329,7 +329,7 @@ div.detailsongs a{color: rgb(0, 0, 0);}
 .artistasimg {
     width:100%;
 }
-.sectionAlbum .img {
+.detailalbum .img {
     width:100%;
     height: unset;
 }
@@ -360,8 +360,13 @@ footer{
     bottom: auto;
 }
 
+article.detailsongs img.img{width: 100%; height: 40%;}
 
+.detailalbum h2{
+    font-size: larger;
+}
 
+article.detailsongs h2,h3{font-size: larger;}
 
 @media (min-width: 720px) {
     body{width: 100%;}
@@ -388,10 +393,27 @@ footer{
     form.form-busq button{
         font-size: 80%;
     }
+
+    .album{display: flex; width: 100%;}
+    div.detailalbum{width: 20%;}
+    article.detailalbum img.img{height: 25%; width: 100%;}
+
     #barras{display: none;}
     nav.menunav h2{margin-right: 10%;}
 
-    
+    div.busqcontain{
+        font-size: 200%;
+        margin-right: 15%;
+    }
+
+    form.form-busq button{
+        font-size: 80%;
+    }
+
+    section.sectionAlbum{display: flex;}
+
+    article.busqcontain{align-items: center;}
+
     section.articles{
         display: flex;
         gap: 1%;
@@ -424,5 +446,14 @@ footer{
         margin: 10px;
     }
 
+    .detailalbum h2{
+        font-size: larger;
+    }
     
+    article.detailalbum{width: 20%;}
+    
+    section.track{display: flex;}
+    article.detailsongs img.img{width: 100%; height: 40%;}
+    article.detailsongs{width: 20%;}
+    article.detailsongs h2,h3{font-size: larger;}
 }
