@@ -96,6 +96,7 @@ article.busqcontain{
     font-size: 100%;
     margin-left: 15%;
     margin-right: 0;
+    text-align: right;
 }
 
 .navcontent{
@@ -139,8 +140,6 @@ footer{
     bottom: 0;
     width: 100%;
 }
-
-footer#footerscroll{position: unset;}
 
 ul.ulfoot{
     display: flex;
@@ -368,6 +367,44 @@ article.detailsongs img.img{width: 100%; height: 40%;}
 
 article.detailsongs h2,h3{font-size: larger;}
 
+article.genresvariados ul img{width: 60%;}
+
+article.genresvariados h1{
+    text-align: center;
+}
+
+article.genresvariados ul li{
+    list-style: none;
+    text-indent: -30px;
+    background-color: black;
+    color: white;
+}
+
+article.genresvariados{
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+section.genres{
+    text-align: center;
+    width: auto;
+}
+
+h1.title{
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+article.genresvariados h1{
+    font-size: larger;
+}
+
 @media (min-width: 720px) {
     body{width: 100%;}
     nav.menunav{height:60px; justify-content: flex-start;}
@@ -456,4 +493,22 @@ article.detailsongs h2,h3{font-size: larger;}
     article.detailsongs img.img{width: 100%; height: 40%;}
     article.detailsongs{width: 20%;}
     article.detailsongs h2,h3{font-size: larger;}
+    section.genres{display: flex;}
+    article.genresvariados{
+        margin: 10px;
+        width: 20%;
+    }
+    article.genresvariados img{height: 150px}
+    h1.title{
+        font-size: larger;
+        text-align: left;
+    }
+    section.artists{display: flex; width: 100%}
+    article.detailartist{
+        width: 25%;
+    }
+    article.detailartist h2{
+        font-size: larger;
+    }
+
 }
