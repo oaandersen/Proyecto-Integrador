@@ -19,12 +19,13 @@ window.addEventListener('load',function(){
             let altTrack = unTrack.album.title;
             let tituloTrack = unTrack.title;
             let artistaTrack = unTrack.artist.name;
-        
+            let idTrack = unTrack.id;
+
             sectionCanciones.innerHTML += `
             <articles class="structure">    
-                <h3 class="titulos2">${tituloTrack}</h3>
+                <h3 class="titulos2"><a class="decoration" href="detail-track.html?${idTrack}">${tituloTrack}</a></h3>
                 <img class="img" src="${imageTrack}" alt="${altTrack}">
-                <h4 class="titulos2">by ${artistaTrack}</h4>
+                <h4 class="titulos2">by <a class="decoration" href="detail-artist.html">${artistaTrack}</a></h4>
             </articles>
             `
         }
@@ -60,9 +61,9 @@ window.addEventListener('load',function(){
         
             sectionAlbum.innerHTML += `
             <articles class="structure">    
-                <h3 class="titulos2">${tituloAlbum}</h3>
+                <h3 class="titulos2"><a class="decoration" href="detail-album.html">${tituloAlbum}</a></h3>
                 <img class="img" src="${albumCover}" alt="${altAlbum}">
-                <h4 class="titulos2">by ${artistaAlbum}</h4>
+                <h4 class="titulos2">by <a class="decoration" href="detail-artist.html">${artistaAlbum}</a></h4>
             </articles>
             `
         }
