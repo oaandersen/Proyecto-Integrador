@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
 
             sectionCanciones.innerHTML += `
             <articles class="structure">    
-                <h3 class="titulos2"><a class="decoration" href="detail-track.html?${idTrack}">${tituloTrack}</a></h3>
+                <h3 class="titulos2"><a class="decoration" href="detail-track.html?id=${idTrack}">${tituloTrack}</a></h3>
                 <img class="img" src="${imageTrack}" alt="${altTrack}">
                 <h4 class="titulos2">by <a class="decoration" href="detail-artist.html">${artistaTrack}</a></h4>
             </articles>

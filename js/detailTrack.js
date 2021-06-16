@@ -1,50 +1,55 @@
 window.addEventListener('load',function(){
 
 // id del track
-let searchResults = new URLSearchParams(this.location.search);
+let searchResults = new URLSearchParams(location.search);
 // let codigo = search_results.get('id');
-console.log('id: ' + codigo);
 
 // <article>
-let articleTrack = this.document.querySelector('article.detailsongs');
+let articleTrack = document.querySelector('article.detailsongs');
 
 // título del track
-let tituloTrack = this.document.querySelector('h2');
+let tituloTrack = document.querySelector('h2 a');
 
 // nombre original
-let nombreArtist  = this.document.querySelector('article.detailsongs h3');
+let nombreArtist  = document.querySelector('h3#artist');
 
 // img para el track
-let elTrack = this.document.querySelector('article.detailsongs img');
+let elTrack = this.document.querySelector('article.detailsongs div');
 
-let disco = document.querySelector('#disco');
+let discoTrack = document.querySelector('#disco');
 
 let anadirPlaylist = document.querySelector('#playlist');
-//Traemos los tracks más vistos del endpoint que nos provee la API.
+
+
+
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let api = 'https://api.deezer.com/track/';
-let codigo = searchResults.get("id");
+let codigo = searchResults.get('id');
 let urlDetalle = proxy + api + codigo ;
 
 fetch(urlDetalle)
   .then(function(respuesta){
+    console.log(respuesta);
     return respuesta.json()
   })
   .then(function(datos){
-    console.log(datos);
-    let track = datos.data;
+    let track = datos;
     let titulo = track.title;
+    let img = track.album.cover_xl;
+    let artista = track.artist.name;
+    let disco = track.album.title;
     // título del track
     tituloTrack.innerText = `${titulo}`;
-    // el track
-    elTrack.src = Track.images.original.url;
-    // nombre original
-    nombreTrack.innerText = track.slug;
-
-    // botón volver
-    articleTrack.innerHTML += `
-    <button onclick="javascript: history.go(-1)" title="volver">&larr; volver</button>
-    `
-
+    // el track imagen
+    elTrack.innerHTML = `<img class="img" src="${img}" alt="titulo">`;
+    nombreArtist.innerHTML += `<a href="">${artista}</a>`;
+    discoTrack.innerHTML += `<a href="">${disco}</a>`;
   })
+  .catch(function(error){
+    //tituloTrack.innerText += 'El recurso no se encontró'
+    console.log(error);
+  })
+
+
+
 })
