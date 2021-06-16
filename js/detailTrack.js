@@ -8,7 +8,7 @@ let searchResults = new URLSearchParams(location.search);
 let articleTrack = document.querySelector('article.detailsongs');
 
 // título del track
-let tituloTrack = document.querySelector('h2 a');
+let tituloTrack = document.querySelector('h1 a');
 
 // nombre original
 let nombreArtist  = document.querySelector('h3#artist');
@@ -20,6 +20,7 @@ let discoTrack = document.querySelector('#disco');
 
 let anadirPlaylist = document.querySelector('#playlist');
 
+let widgetTrack = document.querySelector('#reproducirAudio');
 
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -42,8 +43,9 @@ fetch(urlDetalle)
     tituloTrack.innerText = `${titulo}`;
     // el track imagen
     elTrack.innerHTML = `<img class="img" src="${img}" alt="titulo">`;
-    nombreArtist.innerHTML += `<a href="">${artista}</a>`;
-    discoTrack.innerHTML += `<a href="">${disco}</a>`;
+    nombreArtist.innerHTML += `<a class="decorationTrack" href="">${artista}</a>`;
+    discoTrack.innerHTML += `<a class="decoration" href="">${disco}</a>`;
+    widgetTrack.innerHTML += `<iframe id="reproducirAudio" title="deezer-widget" src="https://widget.deezer.com/widget/auto/track/${codigo}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`
   })
   .catch(function(error){
     //tituloTrack.innerText += 'El recurso no se encontró'
