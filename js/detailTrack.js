@@ -52,6 +52,51 @@ fetch(urlDetalle)
     console.log(error);
   })
 
+    //favoritos
+    let playlist= []; 
+    let recuperoStorage= localStorage.getItem("playlist")
+    
+    if (recuperoStorage != null){
 
+      playlist= JSON.parse(recuperoStorage);
+    }
+    
+    if(playlist.includes(codigo)){
 
+      document.querySelector("#playlist").innerHTML = `Quitar de la playlist
+      <i id="heartFull" class="fas fa-heart"></i>`
+    }
+    let agregarPlaylist= document.querySelector("#playlist");
+    
+    agregarPlaylist.addEventListener ("click", function (e){
+
+      e.preventDefault();
+
+      if(playlist.includes(codigo) ){
+
+      let sacarTrack = playlist.indexOf(codigo)
+
+      playlist.splice(sacarTrack, 1);
+
+      document.querySelector("#playlist").innerHTML = `Agregar a la playlist
+      <i id="heart" class="far fa-heart"></i>`
+
+      console.log (playlist)
+    
+    } else{
+
+      playlist.push(codigo);
+      document.querySelector("#playlist").innerHTML = `
+      Quitar de la playlist
+      <i id="heartFull" class="fas fa-heart"></i>`;
+    
+    }
+    let playlistStorage = JSON.stringify(playlist);
+
+    localStorage.setItem("playlist", playlistStorage);
+
+    console.log(localStorage)
+    })
 })
+
+

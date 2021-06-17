@@ -409,7 +409,7 @@ article.genresvariados h1{
     font-size: larger;
 }
 
-button#playlist{
+a#playlist{
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: larger;
