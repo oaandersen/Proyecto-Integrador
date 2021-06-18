@@ -251,7 +251,7 @@ font-size: 100%;
     justify-content: center;
     text-align-last: center;
     gap: 180px;
-    background-image: url(../img/fotarda.jpg);
+    /* background-image: url(../img/fotarda.jpg); */
     border-radius: 13px;
     
 
@@ -524,8 +524,7 @@ a#playlist{
     article.detailalbum{width: 20%;}
     
     section.track{display: flex;}
-    article.detailsongs div.imagenTrack{width: 37.2%;}
-    article.detailsongs div img.img{height: auto; width: 100%;}
+    .imagenTrack{width: 37.5%; border-radius: 35px;}
     article.detailsongs{ display: flex; width: auto; height: 30%;}
     div.divTracks{width: 70%;}
     article.detailsongs h2,h3{font-size: larger;}
@@ -550,14 +549,11 @@ a#playlist{
     section.track{
         background-image: url(../img/fotarda.jpg);
     }
-    div#reproducirAudio{
+    .reproducirAudio{
         width: 50%;
         height: 70%;
     }
-    div#reproducirAudio iframe{
-        width: 150%;
-        height: 20%;
-    }
+    
     div.divTracks{
         padding: 2.5%;
     }
@@ -566,7 +562,9 @@ a#playlist{
         width: 100%;
     }
 
-    .divTracks h1, .divTracks h3, .divTracks h4, .divTracks button, .divTracks a, .divTracks div{
-        margin: 25px, 0;
+    #astronauta{
+        background-image: url(../img/astronauta.jpeg);
     }
+
+
 }

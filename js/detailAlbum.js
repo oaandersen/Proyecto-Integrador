@@ -1,9 +1,7 @@
 window.addEventListener('load',function(){
 
 // id del album
-let search_results = new URLSearchParams(this.location.search);
-let codigo = search_results.get('id');
-console.log('id: ' + codigo);
+let searchResults = new URLSearchParams(this.location.search);
 
 // <article>
 let articleAlbum = this.document.querySelector('article:first-of-type');
@@ -18,7 +16,10 @@ let nombreAlbum  = this.document.querySelector('article:first-of-type p');
 let elAlbum = this.document.querySelector('article img');
 
 //Traemos los albumes más vistos del endpoint que nos provee la API.
-let urlDetalle = 'api'+ codigo + '31ed509033ef4341ae1d0faea931f415' ;
+let proxy = 'https://cors-anywhere.herokuapp.com/';
+let api = 'https://api.deezer.com/track/';
+let codigo = searchResults.get('id');
+let urlDetalle = proxy + api + codigo ;
 
 fetch(urlDetalle)
   .then(function(respuesta){
@@ -26,10 +27,11 @@ fetch(urlDetalle)
   })
   .then(function(datos){
     console.log(datos);
-    let Album = datos.data;
+    let album = datos;
+    let title = album.title;
 
     // título del album
-    tituloAlbum.innerHTML = '<span>GIF: </span> ' + Album.title;
+    tituloAlbum.innerText = title;
     // el album
     elAlbum.src = Album.images.original.url;
     // nombre original

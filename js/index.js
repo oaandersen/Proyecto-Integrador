@@ -58,10 +58,11 @@ window.addEventListener('load',function(){
             let altAlbum = unAlbum.title;
             let tituloAlbum = unAlbum.title;
             let artistaAlbum = unAlbum.artist.name;
+            let idAlbum = unAlbum.id;
         
             sectionAlbum.innerHTML += `
             <articles class="structure">    
-                <h3 class="titulos2"><a class="decoration" href="detail-album.html">${tituloAlbum}</a></h3>
+                <h3 class="titulos2"><a class="decoration" href="detail-album.html?id=${idAlbum}">${tituloAlbum}</a></h3>
                 <img class="img" src="${albumCover}" alt="${altAlbum}">
                 <h4 class="titulos2">by <a class="decoration" href="detail-artist.html">${artistaAlbum}</a></h4>
             </articles>

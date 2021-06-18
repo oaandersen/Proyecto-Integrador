@@ -14,13 +14,14 @@ let tituloTrack = document.querySelector('h1 a');
 let nombreArtist  = document.querySelector('h3#artist');
 
 // img para el track
-let elTrack = this.document.querySelector('article.detailsongs div');
+let elTrack = this.document.querySelector('.imagenTrack');
 
 let discoTrack = document.querySelector('#disco');
 
 let anadirPlaylist = document.querySelector('#playlist');
 
-let widgetTrack = document.querySelector('#reproducirAudio');
+let widgetTrack = document.querySelector('iframe.reproducirAudio');
+console.log(widgetTrack);
 
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -42,10 +43,12 @@ fetch(urlDetalle)
     // título del track
     tituloTrack.innerText = `${titulo}`;
     // el track imagen
-    elTrack.innerHTML = `<img class="img" src="${img}" alt="titulo">`;
+    elTrack.src = img;
+    elTrack.alt = titulo;
     nombreArtist.innerHTML += `<a class="decorationTrack" href="">${artista}</a>`;
     discoTrack.innerHTML += `<a class="decoration" href="">${disco}</a>`;
-    widgetTrack.innerHTML += `<iframe id="reproducirAudio" title="deezer-widget" src="https://widget.deezer.com/widget/auto/track/${codigo}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`
+    widgetTrack.src = `https://widget.deezer.com/widget/auto/track/${codigo}`;
+
   })
   .catch(function(error){
     //tituloTrack.innerText += 'El recurso no se encontró'
