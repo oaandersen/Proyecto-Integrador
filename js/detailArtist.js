@@ -1,44 +1,51 @@
 window.addEventListener('load',function(){
- // id del artista
- let search_results = new URLSearchParams(this.location.search);
- let codigo = search_results.get('id');
- console.log('id: ' + codigo);
 
- // <article>
- let articleArtist = this.document.querySelector('article:first-of-type');
+  // id del artista
+  let searchResults = new URLSearchParams(location.search);
+  
+  // <article>
+  let articleAlbum = document.querySelector('article:first-of-type');
+   
+  // nombre del artista
+  let nombreArtista  = document.querySelector('h2#artist');
+  
+  // img del artista
+  let elArtista = document.querySelector('.imagenTrack');
+  
+  // lista de 5 albumes
+  let nombreAlbum = document.querySelector('ul')
+  
+  //Traemos los albumes más vistos del endpoint que nos provee la API.
+  let proxy = 'https://cors-anywhere.herokuapp.com/';
+  let api = 'https://api.deezer.com/artist/';
+  let codigo = searchResults.get('id');
+  let urlDetalle = proxy + api + codigo ;
+  
+  fetch(urlDetalle)
+    .then(function(respuesta){
+      return respuesta.json()
+    })
+    .then(function(datos){
+      console.log(datos);
+      let artista = datos;
+      let title = artista.title;
+      let img = artista.picture_xl;
+      let albumes = artista;
+      
 
- // título del artista
- let tituloArtist = this.document.querySelector('h2');
+  
+      // Nombre del artista
 
- // nombre original
- let nombreArtist  = this.document.querySelector('article:first-of-type p');
+    })
+      .catch(function(error){
+        //tituloAlbum.innerText += 'El recurso no se encontró'
+        console.log(error);
+      })
 
- // img para el artista
- let elArtist = this.document.querySelector('article img');
-
- //Traemos los artista más vistos del endpoint que nos provee la API.
- let urlDetalle = 'api'+ codigo + '31ed509033ef4341ae1d0faea931f415' ;
-
- fetch(urlDetalle)
-   .then(function(respuesta){
-     return respuesta.json()
-   })
-   .then(function(datos){
-     console.log(datos);
-     let Artist = datos.data;
-
-     // título del artista
-     tituloArtist.innerHTML = '<span>GIF: </span> ' + Artist.title;
-     // el artista
-     elArtist.src = Artist.images.original.url;
-     // nombre original
-     nombreArtist.innerText = Artist.slug;
-
-     // botón volver
-     articleArtist.innerHTML += `
-     <button onclick="javascript: history.go(-1)" title="volver">&larr; volver</button>
-     `
-
-   })
-
-})
+      // botón volver
+      articleAlbum.innerHTML += `
+      <button onclick="javascript: history.go(-1)" title="volver">&larr; volver</button>
+      `
+  
+    
+  })

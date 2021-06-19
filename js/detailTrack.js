@@ -14,7 +14,7 @@ let tituloTrack = document.querySelector('h1 a');
 let nombreArtist  = document.querySelector('h3#artist');
 
 // img para el track
-let elTrack = this.document.querySelector('.imagenTrack');
+let elTrack = document.querySelector('.imagenTrack');
 
 let discoTrack = document.querySelector('#disco');
 
