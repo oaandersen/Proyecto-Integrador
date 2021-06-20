@@ -56,18 +56,20 @@ fetch(urlDetalle)
     // fecha de estreno album
     fechaEstreno.innerHTML = `<p> Publicado el ${estreno}</p>`;
     // Temas del disco
-    for(i=0; i<10; i++){
-      
-    }
-    nombreCancion.innerHTML = canciones;
+  
+  let apiLista = `https://api.deezer.com/album/${codigo}/tracks?limit=10`;
+ // console.log(album.tracklist);
+
+ let arrayTracks = album.tracks.data;
+arrayTracks.length = 10
+
+for(i=0; i<canciones; i++)
+nombreCancion.innerHTML = canciones[i];
+
   })
-    .catch(function(error){
+  
+   // .catch(function(error){
       //tituloAlbum.innerText += 'El recurso no se encontró'
       console.log(error);
     })
-    // botón volver
-    articleAlbum.innerHTML += `
-    <button onclick="javascript: history.go(-1)" title="volver">&larr; volver</button>
-    `
 
-  })

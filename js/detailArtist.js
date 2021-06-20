@@ -41,11 +41,5 @@ window.addEventListener('load',function(){
         //tituloAlbum.innerText += 'El recurso no se encontró'
         console.log(error);
       })
-
-      // botón volver
-      articleAlbum.innerHTML += `
-      <button onclick="javascript: history.go(-1)" title="volver">&larr; volver</button>
-      `
-  
     
   })
