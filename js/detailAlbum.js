@@ -22,7 +22,7 @@ let nombreGenero = document.querySelector('h4')
 let fechaEstreno = document.querySelector('p')
 
 // temas del disco
-let nombreCancion = document.querySelector('ul')
+ let nombreCancion = document.querySelector('ul')
 
 //Traemos los albumes más vistos del endpoint que nos provee la API.
 let proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -42,7 +42,7 @@ fetch(urlDetalle)
     let artista = album.artist.name;
     let genero = album.genres.data[0].name; 
     let estreno = album.release_date;
-    let canciones = album.tracks.data;
+    let canciones = "";
 
     // título del album
     tituloAlbum.innerText = title;
@@ -57,19 +57,15 @@ fetch(urlDetalle)
     fechaEstreno.innerHTML = `<p> Publicado el ${estreno}</p>`;
     // Temas del disco
   
-  let apiLista = `https://api.deezer.com/album/${codigo}/tracks?limit=10`;
- // console.log(album.tracklist);
+ nombreCancion += `<li><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/${codigo}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe> </li>`
 
- let arrayTracks = album.tracks.data;
-arrayTracks.length = 10
+nombreCancion.innerHTML += canciones;
+//for(i=0; i<canciones; i++)
+//nombreCancion.innerHTML = canciones[i];
 
-for(i=0; i<canciones; i++)
-nombreCancion.innerHTML = canciones[i];
-
-  })
+ })
   
    // .catch(function(error){
       //tituloAlbum.innerText += 'El recurso no se encontró'
-      console.log(error);
-    })
-
+     // console.log(error);
+  })

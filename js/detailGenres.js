@@ -5,39 +5,36 @@ let codigo = search_results.get('id');
 console.log('id: ' + codigo);
 
 // <article>
-let articleGenero = this.document.querySelector('article:first-of-type');
+let articleGenero = document.querySelector('article:first-of-type');
 
 // título del genero
-let tituloGenero = this.document.querySelector('h2');
+let tituloGenero = document.querySelector('h2');
 
 // nombre original
-let nombreGenero  = this.document.querySelector('article:first-of-type p');
+let nombreGenero  = document.querySelector('article:first-of-type p');
 
 // img para el genero
 let elGenero = this.document.querySelector('article img');
 
-//Traemos los generos más vistos del endpoint que nos provee la API.
-let urlDetalle = 'api'+ codigo + '31ed509033ef4341ae1d0faea931f415' ;
+let proxy = 'https://cors-anywhere.herokuapp.com/';
+let api = 'https://api.deezer.com/genre/';
+let id = searchResults.get('id');
+let urlDetalle = proxy + api + id ;
 
 fetch(urlDetalle)
   .then(function(respuesta){
     return respuesta.json()
   })
   .then(function(datos){
+    let Genero = datos;
+    let articleDetalle = document.querySelector('.genresvariados'); 
+    for(let i=0; i<3;i ++){
+
+    }
+
     console.log(datos);
-    let Genero = datos.data;
+    
 
-    // título del genero
-    tituloGenero.innerHTML = '<span>GIF: </span> ' + Genero.title;
-    // el genero
-    elGenero.src = Genero.images.original.url;
-    // nombre original
-    nombreGenero.innerText = Genero.slug;
-
-    // botón volver
-    articleGenero.innerHTML += `
-    <button onclick="javascript: history.go(-1)" title="volver">&larr; volver</button>
-    `
 
   })
 

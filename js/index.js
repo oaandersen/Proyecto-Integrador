@@ -98,7 +98,7 @@ window.addEventListener('load',function(){
         
             sectionCantantes.innerHTML += `
             <articles class="structure">    
-                <h3 class="titulos2">${nombreArtist}</h3>
+                <h3 class="titulos2"><a class="decoration" href="detail-artist.html">${nombreArtist}</a></h3>
                 <img class="img" src="${artistImg}" alt="${altArtist}">
             </articles>
             `
