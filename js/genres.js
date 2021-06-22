@@ -20,10 +20,10 @@ window.addEventListener('load',function(){
     let unGenero = generos[i];
     let titulo = unGenero.name;
     let imagen = unGenero.picture_xl;
-
+      let codigo = unGenero.id;
     generosSection.innerHTML += `
     <article class="divgeneros">
-    <h2 class="tituloplaylist"><a class="decoration" href="detail-genres.html">${titulo}</a></h2>
+    <h2 class="tituloplaylist"><a class="decoration" href="detail-genres.html?id=${codigo}&name=${titulo}">${titulo}</a></h2>
     <img class="img" src="${imagen}" alt="${titulo}">
     </article>`;
     }

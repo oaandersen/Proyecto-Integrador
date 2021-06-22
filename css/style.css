@@ -398,8 +398,8 @@ article.genresvariados{
 }
 
 section.genres{
-    text-align: center;
-    width: auto;
+display: flex;
+flex-wrap: wrap;
 }
 
 h1.title{
@@ -546,7 +546,7 @@ a#playlist{
     }
     article.genresvariados img{height: 150px}
     h1.title{
-        font-size: larger;
+        font-size: 30px;
         text-align: left;
     }
     .imagenAlbum{width: 40%;}
@@ -589,5 +589,26 @@ a#playlist{
 
     .generosMain{
         background-image: url(../img/astronauta.jpeg);
+    }
+    .nombreGenero{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .generoArticle{
+    width: 16.66%;
+    background-color: #000000;
+    margin: 5px;
+    text-align: center;
+    }
+    .imagenGenero{
+        min-width: 100%;
+    }
+    article.generoArticle h3 a.decoration{
+        color: rgb(255, 255, 255);
+
+    }
+    article.divgeneros h2.tituloplaylist a.decoration{
+        font-size: 175%;
     }
 }

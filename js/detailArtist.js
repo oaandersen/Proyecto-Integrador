@@ -8,7 +8,7 @@ window.addEventListener('load',function(){
   let api = 'https://api.deezer.com/artist/';
   let codigo = searchResults.get('id');
   let urlDetalle = proxy + api + codigo ;
-
+console.log(urlDetalle)
   // <article>
   let articleAlbum = document.querySelector('article:first-of-type');
    

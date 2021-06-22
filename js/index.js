@@ -59,7 +59,7 @@ window.addEventListener('load',function(){
             let tituloAlbum = unAlbum.title;
             let artistaAlbum = unAlbum.artist.name;
             let idAlbum = unAlbum.id;
-        
+            
             sectionAlbum.innerHTML += `
             <articles class="structure">    
                 <h3 class="titulos2"><a class="decoration" href="detail-album.html?id=${idAlbum}">${tituloAlbum}</a></h3>
@@ -95,10 +95,11 @@ window.addEventListener('load',function(){
             let artistImg = unArtist.picture;
             let altArtist = unArtist.name;
             let nombreArtist = unArtist.name;
-        
+            let idArtist = unArtist.id;
+
             sectionCantantes.innerHTML += `
             <articles class="structure">    
-                <h3 class="titulos2"><a class="decoration" href="detail-artist.html">${nombreArtist}</a></h3>
+                <h3 class="titulos2"><a class="decoration" href="detail-artist.html?id=${idArtist}">${nombreArtist}</a></h3>
                 <img class="img" src="${artistImg}" alt="${altArtist}">
             </articles>
             `
