@@ -13,13 +13,13 @@ console.log(urlDetalle)
   let articleAlbum = document.querySelector('article:first-of-type');
    
   // nombre del artista
-  let nombreGenero  = document.querySelector('h1');
+  let nombreArtista  = document.querySelector('h2#artist');
   
   // img del artista
-  let elArtista = document.querySelector('.imagenTrack');
+  let elArtista = document.querySelector('.imagenArtist');
   
-  // lista de 5 albumes
-  let nombreAlbum = document.querySelector('ul')
+  // lista de 5 tracks del artista
+  let iframe = document.querySelector('iframe')
   
  
 
@@ -31,17 +31,21 @@ console.log(urlDetalle)
     .then(function(datos){
       console.log(datos);
       let artista = datos;
-      let title = artista.title;
-      let img = artista.picture_xl;
-      let albumes = artista;
+      let title = artista.name;
+      let img = artista.picture;
       
+      nombreArtista.innerText = title;
+
+      elArtista.src = img;
+      elArtista.alt = title;
+
+      iframe.src = `https://widget.deezer.com/widget/dark/artist/${codigo}/top_tracks`;
 
   
-      // Nombre del artista
+  
 
     })
       .catch(function(error){
-        //tituloAlbum.innerText += 'El recurso no se encontró'
         console.log(error);
       })
 

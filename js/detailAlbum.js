@@ -44,7 +44,6 @@ fetch(urlDetalle)
     let artista = album.artist.name;
     let genero = album.genres.data[0].name; 
     let estreno = album.release_date;
-    let canciones = "";
 
     // título del album
     tituloAlbum.innerText = title;
