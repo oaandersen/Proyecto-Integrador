@@ -111,4 +111,26 @@ window.addEventListener('load',function(){
         console.log(error);
     })
 
+
+    //BUSCADOR
+    // let formulario = document.querySelector('.busqcontain');
+    let buscador = document.querySelector('.buscador');
+    let form = document.querySelector('.form-busq');
+    let parrafo = document.querySelector('.mensaje');
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if (buscador.value == ''){
+            parrafo.innerText = 'El campo esta vacío';
+        } else if (buscador.value.length<3){
+            parrafo.innerText = 'Escribe al menos 3 caracteres';
+        }else{
+            this.submit();
+        }
+    });
+
+    buscador.addEventListener('input', function(){
+        parrafo.innerText = '';
+    });
+
 })

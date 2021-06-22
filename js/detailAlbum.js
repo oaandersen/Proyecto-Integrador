@@ -13,7 +13,7 @@ let tituloAlbum = document.querySelector('h2 a');
 let nombreArtista  = document.querySelector('h3#artist');
 
 // img para el album
-let elAlbum = document.querySelector('.imagenTrack');
+let elAlbum = document.querySelector('.imagenAlbum');
 
 // nombre del genero
 let nombreGenero = document.querySelector('h4')
@@ -22,7 +22,9 @@ let nombreGenero = document.querySelector('h4')
 let fechaEstreno = document.querySelector('p')
 
 // temas del disco
- let nombreCancion = document.querySelector('ul')
+ let nombreCancion = document.querySelector('.ulIframe');
+
+ let iframe = document.querySelector('iframe')
 
 //Traemos los albumes más vistos del endpoint que nos provee la API.
 let proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -57,9 +59,9 @@ fetch(urlDetalle)
     fechaEstreno.innerHTML = `<p> Publicado el ${estreno}</p>`;
     // Temas del disco
   
- nombreCancion += `<li><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/${codigo}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe> </li>`
+ iframe.src = `https://widget.deezer.com/widget/dark/album/${codigo}`;
 
-nombreCancion.innerHTML += canciones;
+
 //for(i=0; i<canciones; i++)
 //nombreCancion.innerHTML = canciones[i];
 

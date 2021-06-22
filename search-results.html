@@ -31,21 +31,23 @@
 
             <article class="busqcontain">
                 <form class="form-busq" action="search-results.html" method="GET">
-                    <input type="text" name="buscador" value="" placeholder="buscar">
-                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" name="q" value="" placeholder="buscar">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <span class="alert"></span>    
                 </form>
             </article>
         </nav>
     </header>
-    <main id="astronauta">
-        <section class="resultados-chart" class="columnas-rdb">
+    <main class="astronauta">
             <h1 class="titulo-rdb">Resultados de Búsqueda</h1>
+            <h2 class="tituloBusqueda">Mostrando resultados para </h2>
+            <ul class="ulResultados"></ul>
 
-
+        <section class="columnas-rdb">
             <h2 class="titulos-chart-rdb">ALBUM</h2> 
             <h3> No se encuentran resultados </h3>
-
-            <!-- <article class="divlinks-rdb">
+        </section>
+            <!--<article class="divlinks-rdb">
                 <a href="detail-album.html#blackinblack" class="linksrdb">Back in Black</a>
             </article>
             <article>
@@ -62,16 +64,17 @@
 
             <article class="divlinks-rdb">
                 <a href="detail-album.html#Overexposed" class="linksrdb"></a>
-            </article> -->
+            </article>
 
 
 
-        </section>
-        <section class="columnas-rdb">
+        </section>-->
+            <section class="columnas-rdb">
              <h2 class="titulos-chart-rdb">ARTISTAS</h2> 
              <h3> No se encuentran resultados </h3>
-
-            <!--<article class="divlinks-rdb">
+            </section>
+             <!--
+            <article class="divlinks-rdb">
                 <a href="detail-artist.html#RonaldBelfort" class="linksrdb">Ronald Belfort</a>
             </article>
             <article class="divlinks-rdb">
@@ -82,15 +85,16 @@
             </article>
             <article class="divlinks-rdb">
                 <a href="detail-artist.html#gustavocerati" class="linksrdb">Gustavo Cerati</a>
-            </article> -->
+            </article> 
 
 
-        </section>
+        </section>-->
 
         <section class="columnas-rdb">
-            <H2 class="titulos-chart-rdb">TRACKS</H2> 
+            <h2 class="titulos-chart-rdb">TRACKS</h2> 
             <h3> No se encuentran resultados </h3>
-           <!--  <article class="divlinks-rdb">
+        </section>
+           <!--<article class="divlinks-rdb">
                 <a href="detail-track.html#blackinblack" class="linksrdb">Black in Black</a>
             </article>
 
@@ -106,9 +110,9 @@
             </article>
             <article class="divlinks-rdb">
                 <a href="detail-track.html#maps" class="linksrdb">Maps</a>
-            </article> -->
+            </article> 
 
-        </section>
+        </section>-->
 
 
 
@@ -116,8 +120,8 @@
         <section class="columnas-rdb">
             <h2 class="titulos-chart-rdb">GENEROS </h2> 
             <h3> No se encuentran resultados </h3>
-
-            <!-- <article class="divlinks-rdb">
+        </section>
+            <!--<article class="divlinks-rdb">
                 <a href="detail-genres.html#hardrock" class="linksrdb">Hard Rock</a>
             </article>
             <article class="divlinks-rdb">
@@ -136,12 +140,20 @@
 
         </section>
 
-
-
-
-
-      
     </main>
+    <footer id="footerscroll">
+        <article class="footer">
+            <ul class="ulfoot">
+                <li><a href="mailto:oandersen@udesa.edu.ar">Oliver Andersen</a></li>
+                <li><a href="mailto:sdeabelleyra@udesa.edu.ar">Simón de Abelleyra</a></li>
+                <li><a href="mailto:jbrandanquarto@udesa.edu.ar">Joaquín Brandan</a></li>
+                <li><a href="tel:11 1234-5678"><i class="fas fa-phone"></i></a></li>
+            </ul>
+
+        </article>
+
+    </footer>
+    <script src="js/searchResults.js"></script>
 </body>
 
 </html>

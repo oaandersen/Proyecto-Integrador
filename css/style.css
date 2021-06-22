@@ -115,6 +115,12 @@ input{
     font-family: 'Montserrat', sans-serif;
 }
 
+span.mensaje{
+    color: rgb(255, 255, 255);
+    font-size: 50%;
+    min-width: 40%;
+}
+
 button{
     background-color: transparent;
     border: none;
@@ -220,11 +226,14 @@ font-size: 100%;
 
 .tituloplaylist  {
     color: white;
-    background-color: #000000de;
+    background-color: #000000;
     padding: 1%;
-    border-radius: 13px;
-    font-size: 100%;
-    }
+}
+
+section.genresdisplay h2.tituloplaylist a{
+    color: rgb(255, 255, 255);
+}
+
     .medioplaylist {display: grid;
         gap: 45px;
          padding: 40px; 
@@ -298,8 +307,9 @@ font-size: 100%;
 
 
 .divgeneros{
-    background-color:rgb(214, 193, 0);
+    background-color: rgba(0, 0, 0, 0.45);
     text-align: center;
+    padding: 5%;
 }
 
 .divgeneros img{
@@ -332,10 +342,8 @@ div.detailsongs a{color: rgb(0, 0, 0);}
 .artistasimg {
     width:100%;
 }
-.detailalbum .img {
-    width:100%;
-    height: unset;
-}
+
+
 
 .detailartist{
     background-color: rgba(5, 4, 4, 0.796);
@@ -433,6 +441,10 @@ a#playlist{
     font-size: 100%;
 }
 
+.imagenAlbum{
+    max-width: 100%;
+}
+
 @media (min-width: 720px) {
     body{width: 100%;}
     nav.menunav{height:60px; justify-content: flex-start;}
@@ -460,7 +472,6 @@ a#playlist{
     }
 
     .album{display: flex; width: 100%;}
-    div.detailalbum{width: 20%;}
     article.detailalbum img.img{height: 25%; width: 100%;}
 
     #barras{display: none;}
@@ -521,7 +532,7 @@ a#playlist{
         font-size: larger;
     }
     
-    article.detailalbum{width: 20%;}
+    article.detailalbum{width: 100%;}
     
     section.track{display: flex;}
     .imagenTrack{width: 37.5%; border-radius: 35px;}
@@ -538,6 +549,7 @@ a#playlist{
         font-size: larger;
         text-align: left;
     }
+    .imagenAlbum{width: 40%;}
     section.artists{display: flex; width: 100%}
     article.detailartist{
         width: 25%;
@@ -562,9 +574,20 @@ a#playlist{
         width: 100%;
     }
 
-    #astronauta{
+    .astronauta{
         background-image: url(../img/astronauta.jpeg);
     }
 
+    section.genresdisplay{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 
+    article.divgeneros{
+        width: 23%;
+    }
+
+    .generosMain{
+        background-image: url(../img/astronauta.jpeg);
+    }
 }
