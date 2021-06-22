@@ -4,7 +4,7 @@ window.addEventListener('load',function(){
     let sectionCanciones = document.querySelector('#tracks');
     let urlTracks = 'https://api.deezer.com/chart/0/tracks?limit=5';
     let proxy = 'https://cors-anywhere.herokuapp.com/'
-
+    console.log(urlTracks)
     fetch(proxy + urlTracks)
     .then(function(respuesta){
         console.log(respuesta);
@@ -20,12 +20,13 @@ window.addEventListener('load',function(){
             let tituloTrack = unTrack.title;
             let artistaTrack = unTrack.artist.name;
             let idTrack = unTrack.id;
+            let idArtist = unTrack.artist.id;
 
             sectionCanciones.innerHTML += `
             <articles class="structure">    
                 <h3 class="titulos2"><a class="decoration" href="detail-track.html?id=${idTrack}">${tituloTrack}</a></h3>
                 <img class="img" src="${imageTrack}" alt="${altTrack}">
-                <h4 class="titulos2">by <a class="decoration" href="detail-artist.html">${artistaTrack}</a></h4>
+                <h4 class="titulos2">by <a class="decoration" href="detail-artist.html?id=${idArtist}">${artistaTrack}</a></h4>
             </articles>
             `
         }
@@ -59,12 +60,13 @@ window.addEventListener('load',function(){
             let tituloAlbum = unAlbum.title;
             let artistaAlbum = unAlbum.artist.name;
             let idAlbum = unAlbum.id;
-            
+            let idArtist = unAlbum.artist.id;
+
             sectionAlbum.innerHTML += `
             <articles class="structure">    
                 <h3 class="titulos2"><a class="decoration" href="detail-album.html?id=${idAlbum}">${tituloAlbum}</a></h3>
                 <img class="img" src="${albumCover}" alt="${altAlbum}">
-                <h4 class="titulos2">by <a class="decoration" href="detail-artist.html">${artistaAlbum}</a></h4>
+                <h4 class="titulos2">by <a class="decoration" href="detail-artist.html?id=${idArtist}">${artistaAlbum}</a></h4>
             </articles>
             `
         }
@@ -114,7 +116,6 @@ window.addEventListener('load',function(){
 
 
     //BUSCADOR
-    // let formulario = document.querySelector('.busqcontain');
     let buscador = document.querySelector('.buscador');
     let form = document.querySelector('.form-busq');
     let parrafo = document.querySelector('.mensaje');
