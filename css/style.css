@@ -114,6 +114,9 @@ input{
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+.noResultados{
+    display: none;
+}
 
 span.mensaje{
     color: rgb(255, 255, 255);
@@ -590,6 +593,14 @@ a#playlist{
     .generosMain{
         background-image: url(../img/astronauta.jpeg);
     }
+    
+    .tituloBusqueda{
+        color: white;
+    }
+    .ulResultados{
+        color: white;
+    }
+
     .nombreGenero{
         display: flex;
         flex-wrap: wrap;
@@ -609,6 +620,6 @@ a#playlist{
 
     }
     article.divgeneros h2.tituloplaylist a.decoration{
-        font-size: 175%;
-    }
+        font-size: 175%;}
+        
 }
