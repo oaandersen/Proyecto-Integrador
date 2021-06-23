@@ -26,7 +26,7 @@ fetch(urlDetalle)
   .then(function(datos){
     let genero = datos.data;
     for(let i=0; i<genero.length; i++){
-      let imagen = genero[i].picture;
+      let imagen = genero[i].picture_xl;
       let nombre = genero[i].name;
       let idArtist = genero[i].id;
 

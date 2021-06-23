@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
     
     if( playlist.length == 0 ) {
         listaTracks.innerHTML += ` 
-        <p>Aun no hay canciones en tu playlist</p>`
+        <p class="parrafosPlist">Aún no hay canciones en tu playlist</p>`
     
     } else{ 
             for ( let i=0; i<playlist.length; i++ ) {
@@ -37,12 +37,20 @@ function encontrarTrack(idTrack){
     
     .then (function(tracks){
     console.log(tracks)
-    let untrack = tracks;
-    let iduntrack= untrack.id;
-    let nombretrack = untrack.title;
+    let unTrack = tracks;
+    let idUnTrack= unTrack.id;
+    let nombreTrack = unTrack.title;
+    let imagen = unTrack.album.cover;
+    let artista = unTrack.artist.name;
+    let idArtist = unTrack.artist.id;
+
     listaTracks.innerHTML += ` 
-    <article>
-        <h3> <a class="decoration" href="detail-track.html?id=${iduntrack}">${nombretrack} </a> </h3>
+    <article class="articuloPlist">
+    <img class="imgPlist" src="${imagen}">    
+    <div>
+    <h4 class="tracksPlaylist"> <a class="decoration" href="detail-track.html?id=${idUnTrack}">${nombreTrack} </a> </h4>
+    <p><a class="decoration" href="detail-artist.html?id=${idArtist}"> by ${artista}</a></p>
+    </div>
     </article>
     ` 
     

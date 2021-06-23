@@ -32,7 +32,7 @@ console.log(urlDetalle)
       console.log(datos);
       let artista = datos;
       let title = artista.name;
-      let img = artista.picture;
+      let img = artista.picture_xl;
       
       nombreArtista.innerText = title;
 
