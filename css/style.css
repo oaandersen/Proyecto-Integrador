@@ -270,11 +270,16 @@ section.genresdisplay h2.tituloplaylist a{
 }
 .titulos-chart-rdb
 {
-    color:black;
-    border-top: double 5px #eeeeeea3;
-    border-bottom: double 5px #eeeeeea3;
-    text-align-last: center;
-    border-radius: 13px;
+    
+        color: black;
+        border-top: double 5px rgb(5 4 4 / 80%);
+        border-bottom: double 5px #2a2828;
+        text-align-last: center;
+        border-radius: 13px;
+        background: color;
+        background-color: #ffffff8a;
+    
+ 
 
 }
 .titulo-rdb{
@@ -297,7 +302,8 @@ section.genresdisplay h2.tituloplaylist a{
 }
 .columnas-rdb
 {
-    background-color: #eee6;
+    
+    background-color: #eeeeee87;
 }
 .links-cancionesfav
 {
