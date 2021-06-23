@@ -19,7 +19,8 @@ console.log(urlDetalle)
   let elArtista = document.querySelector('.imagenArtist');
   
   // lista de 5 tracks del artista
-  let iframe = document.querySelector('iframe')
+  //let iframe = document.querySelector('iframe')
+  let listaAlbum = document.querySelector('.ulIframe') 
   
  
 
@@ -39,15 +40,35 @@ console.log(urlDetalle)
       elArtista.src = img;
       elArtista.alt = title;
 
-      iframe.src = `https://widget.deezer.com/widget/dark/artist/${codigo}/top_tracks`;
-
-  
-  
-
+      //iframe.src = `https://widget.deezer.com/widget/dark/artist/${codigo}/top_tracks`;
     })
-      .catch(function(error){
-        console.log(error);
-      })
+    .catch(function(error){
+      console.log(error);
+    })
+
+
+  let apiTop = `https://api.deezer.com/artist/${codigo}/albums?limit=5`;  
+  fetch(proxy + apiTop)
+    .then(function(respuesta){
+      return respuesta.json()
+    })
+    .then(function(datos){
+      console.log(datos);
+      let albumes = datos.data;
+
+      for (let i=0; i<=albumes.length; i++){
+      let topAlbum = albumes[i].title;
+      let idAlbum = albumes[i].id;
+        listaAlbum.innerHTML += `
+        <li><a class="decorationBlanco" href="detail-album.html?id=${idAlbum}">${topAlbum}</a></li>
+        `
+      }
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+  
+
 
      //BUSCADOR
     let buscador = document.querySelector('.buscador');

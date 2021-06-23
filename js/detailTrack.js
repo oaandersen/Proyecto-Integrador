@@ -46,7 +46,7 @@ fetch(urlDetalle)
     elTrack.src = img;
     elTrack.alt = titulo;
     nombreArtist.innerHTML += `<a class="decorationTrack" href="">${artista}</a>`;
-    discoTrack.innerHTML += `<a class="decoration" href="">${disco}</a>`;
+    discoTrack.innerHTML += `<a class="decorationBlack" href="">${disco}</a>`;
     widgetTrack.src = `https://widget.deezer.com/widget/auto/track/${codigo}`;
 
   })

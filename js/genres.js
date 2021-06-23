@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
       let codigo = unGenero.id;
     generosSection.innerHTML += `
     <article class="divgeneros">
-    <h2 class="tituloplaylist"><a class="decoration" href="detail-genres.html?id=${codigo}&name=${titulo}">${titulo}</a></h2>
+    <h2 class="titulogenero"><a class="decorationGenero" href="detail-genres.html?id=${codigo}&name=${titulo}">${titulo}</a></h2>
     <img class="img" src="${imagen}" alt="${titulo}">
     </article>`;
     }

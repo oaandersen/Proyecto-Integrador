@@ -4,7 +4,8 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-image: url(../img/imagebg.png);
+    background-image: url(../img/estrellas-bg.jpg);
+    background-size: contain;
     height: 100%;
     width: 100%;
     padding: 0;
@@ -190,19 +191,16 @@ ul.ulfoot{
     justify-content: space-between;
     margin: 5% auto;
     display: flex;
-    border: solid 2px rgb(0, 0, 0);
+    border: solid 2px rgb(214, 193, 0);
     padding: 3%;
-    background-color: rgb(214, 193, 0);
+    /*background-color: rgb(214, 193, 0);*/
     align-items: center;
-}
-
-.structure img{
-    border-radius: 100%;
+    background-color: black;
 }
 
 .structure h3, .structure h5{
-    border-top: double 5px black;
-    border-bottom: double 5px black;
+    border-top: double 5px /*black*/ rgb(214,193,0);
+    border-bottom: double 5px /*black*/ rgb(214, 193, 0);
 } 
 
 .img {
@@ -210,7 +208,7 @@ ul.ulfoot{
 }
    
 .decoration {
-    color: black;
+    color: /*black*/ rgb(214, 193, 0);
     text-decoration: none;
 }
 
@@ -226,6 +224,7 @@ font-size: 100%;
 .titulos2 {
     text-align: left;
     font-size: 80%;
+    color: rgb(214, 193, 0);
 }
 
 .tituloplaylist  {
@@ -324,6 +323,8 @@ section.genresdisplay h2.tituloplaylist a{
 }
 
 a{text-decoration: none;}
+
+
 
 .detailsongs{
     background-color: rgba(179, 179, 179, 0.582);
@@ -438,6 +439,11 @@ a#playlist{
     font-size: 70%;
 }
 
+.decorationBlack{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
 .detailsongs h1 {
     font-size: 100%;
 }
@@ -460,7 +466,8 @@ h2.titulos-chart-rdb{
 }
 
 main.playlistMain{
-    background-image: url(../img/musiquitaBG.jpg);
+    background-image: url(../img/estrellas-bg.jpg);
+    background-size: contain;
 }
 
 .parrafosPlist{
@@ -485,6 +492,7 @@ h1.tituloplaylist{
     display: flex;
     background-color: rgb(0, 0, 0);
     width: 100%;
+    border: solid 2px rgb(214, 193, 0);
 }
 
 .articuloPlist p a{
@@ -499,11 +507,63 @@ img.imagenArtist{
     font-size: 140%;
 }
 
+article.resultadosClass{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    border: solid 2px rgb(214, 193, 0);
+    margin-bottom: 20px;
+}
+
+a.decorationAmarillo{
+    text-decoration: none;
+    color: rgb(214, 193, 0);
+}
+
+.titulogenero{
+    font-size: 120%;
+    color: black;
+}
+
+.decorationGenero{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.divgeneros{
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.decorationBlanco{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.imagenTrack{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.imagenGenero{
+    width: 100%;
+}
+
+article.generoArticle{
+    background-color: rgb(0, 0, 0);
+    border: solid 2px rgb(214, 193, 0);
+    margin-bottom: 15px;
+}
+
+.generoArticle h3 a.decoration{
+    padding: 10px;
+    color: rgb(214, 193, 0);
+}
+
 @media (min-width: 720px) {
     body{width: 100%;}
     nav.menunav{height:60px; justify-content: flex-start;}
     nav.menunav h2{font-size: 150%;}
-    article.busqcontain{padding: 10%}
     ul.navigation li{ display: block;}
     ul.navigation li i{color: white;}
     article#toggle i{display: none;}
@@ -520,7 +580,9 @@ img.imagenArtist{
     article.busqcontain{
         font-size: 200%;
         margin-right: 15%;
+        padding: 10%;
     }
+
     form.form-busq button{
         font-size: 80%;
     }
@@ -556,8 +618,10 @@ img.imagenArtist{
     }
 
     .structure img{
-        width: 150px;
-        height: 150px;
+        /*width: 150px;
+        height: 150px;*/
+        width: 90%;
+        height: auto;
     }
 
     .structure h3, .structure h4{
@@ -580,6 +644,7 @@ img.imagenArtist{
         width: 20%;
         padding: 5px;
         margin: 10px;
+        border: solid 2px rgb(214, 193, 0);
     }
 
     .detailalbum h2{
@@ -666,10 +731,7 @@ img.imagenArtist{
     .imagenGenero{
         max-width: 100%;
     }
-    article.generoArticle h3 a.decoration{
-        color: rgb(255, 255, 255);
-
-    }
+    
     article.divgeneros h2.tituloplaylist a.decoration{
         font-size: 175%;}
 
@@ -677,24 +739,27 @@ img.imagenArtist{
         font-size: 25px;
     }
 
-    ul.ulResultadosAlbum{
+    section.ulResultadosAlbum{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-    ul.ulResultadosTracks{
+    section.ulResultadosTracks{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-    ul.ulResultadosArtist{
+    section.ulResultadosArtist{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
     article.resultadosClass{
-        width: 33.33%;
+        width: 30%;
         text-align: center;
+        background-color: rgb(0, 0, 0);
+        border: solid 2px rgb(214, 193, 0);
+        margin-bottom: 20px;
     }
 
     h2.tituloBusqueda{

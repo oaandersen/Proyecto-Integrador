@@ -13,9 +13,9 @@ window.addEventListener('load',function(){
     let ulResultadosArtist = document.querySelector('.ulResultadosArtist');
     let proxy = 'https://cors-anywhere.herokuapp.com/';
     let apiBusqueda = `https://api.deezer.com/search/artist?q=${busqueda}`;
-    let noResultadosAlbum = document.querySelector("ul.ulResultadosAlbum h3.noResultados");
-    let noResultadosArtist = document.querySelector("ul.ulResultadosArtist h3.noResultados");
-    let noResultadosTrack = document.querySelector("ul.ulResultadosTracks h3.noResultados");
+    let noResultadosAlbum = document.querySelector("section.ulResultadosAlbum h3.noResultados");
+    let noResultadosArtist = document.querySelector("section.ulResultadosArtist h3.noResultados");
+    let noResultadosTrack = document.querySelector("section.ulResultadosTracks h3.noResultados");
     tituloBusqueda.innerText +=  ` "${busqueda}"`;
 
     fetch(proxy + apiBusqueda)
@@ -103,7 +103,7 @@ window.addEventListener('load',function(){
 
                     ulResultadosAlbum.innerHTML += `
                     <article class="resultadosClass">
-                    <h3><a class="decoration" href="detail-album.html?id=${idAlbum}">${title}</a></h3>
+                    <h3><a class="decorationAmarillo" href="detail-album.html?id=${idAlbum}">${title}</a></h3>
                     <img src="${imagen}" alt="${title}">
                     </article>
                     `
