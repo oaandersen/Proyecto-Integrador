@@ -104,7 +104,6 @@ article.busqcontain{
 .navcontent{
     display: flex;
     justify-content: space-between;
-    width: 80%;
 }
 
 input{
@@ -582,6 +581,8 @@ article.generoArticle{
     justify-content: space-evenly;
 }
 
+
+
 @media (min-width: 720px) {
     body{width: 100%;}
     nav.menunav{height:60px; justify-content: flex-start;}
@@ -694,12 +695,21 @@ article.generoArticle{
     .imagenAlbum{width: 40%;}
     section.artists{display: flex; width: 100%}
     article.detailartist{
-        width: 25%;
+        width: 100%;
+        background-color: black;
+        display: flex;
     }
-    article.detailartist h2{
-        font-size: larger;
+    #artist{
+        font-size: 50px;
+        text-transform: uppercase;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
     
+    article.detailartist div{
+        margin-left: 20px;
+    }
+
     section.track{
         background-image: url(../img/fotarda.jpg);
     }
@@ -817,5 +827,14 @@ article.generoArticle{
     
     .botonSeleccionado{
         font-size: 100%;
+    }
+
+    img.imagenArtist{
+        width: 37%;
+        border-radius: 35px;
+    }
+
+    ul.ulIframe{
+        font-size: 120%;
     }
 }
