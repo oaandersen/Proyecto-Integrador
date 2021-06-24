@@ -11,7 +11,7 @@ let articleTrack = document.querySelector('article.detailsongs');
 let tituloTrack = document.querySelector('h1 a');
 
 // nombre original
-let nombreArtist  = document.querySelector('h3#artist');
+let nombreArtist  = document.querySelector('h3#artistTrack');
 
 // img para el track
 let elTrack = document.querySelector('.imagenTrack');
@@ -39,14 +39,16 @@ fetch(urlDetalle)
     let titulo = track.title;
     let img = track.album.cover_xl;
     let artista = track.artist.name;
+    let idArtist = track.artist.id;
     let disco = track.album.title;
+    let idDisco = track.album.id;
     // título del track
     tituloTrack.innerText = `${titulo}`;
     // el track imagen
     elTrack.src = img;
     elTrack.alt = titulo;
-    nombreArtist.innerHTML += `<a class="decorationTrack" href="">${artista}</a>`;
-    discoTrack.innerHTML += `<a class="decorationBlack" href="">${disco}</a>`;
+    nombreArtist.innerHTML += `<a class="decorationTrack" href="detail-artist.html?id=${idArtist}">${artista}</a>`;
+    discoTrack.innerHTML += `<a class="decorationBlack" href="detail-album.html?id=${idDisco}">${disco}</a>`;
     widgetTrack.src = `https://widget.deezer.com/widget/auto/track/${codigo}`;
 
   })

@@ -330,7 +330,7 @@ a{text-decoration: none;}
     color: rgb(0, 0, 0);
     border-radius: 35px;
     padding: 10px;
-    margin: 15px;
+    width: 100%;
 }
 
 .detailsongs audio{
@@ -340,10 +340,6 @@ a{text-decoration: none;}
 
 
 div.detailsongs a{color: rgb(0, 0, 0);}
-
-#verPlaylist{
-    margin-left: 5px;
-}
 
 .artistasimg {
     width:100%;
@@ -581,7 +577,22 @@ article.generoArticle{
     justify-content: space-evenly;
 }
 
+.iframeTrack{
+    margin-top: 10px;
+}
 
+#verPlaylist{
+    font-size: larger;
+}
+
+h4#disco{
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+article.detailalbum h4 a{
+    font-size: 10px;
+}
 
 @media (min-width: 720px) {
     body{width: 100%;}
@@ -704,6 +715,10 @@ article.generoArticle{
         text-transform: uppercase;
         background-color: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
+    }
+
+    #artistTrack{
+        font-size: 40px;
     }
     
     article.detailartist div{
@@ -836,5 +851,9 @@ article.generoArticle{
 
     ul.ulIframe{
         font-size: 120%;
+    }
+
+    article.detailalbum h4 a{
+        font-size: 20px;
     }
 }

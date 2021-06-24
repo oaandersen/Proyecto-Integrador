@@ -44,6 +44,8 @@ fetch(urlDetalle)
     let artista = album.artist.name;
     let genero = album.genres.data[0].name; 
     let estreno = album.release_date;
+    let idArtist = album.artist.id;
+    let idGenero = album.genres.data[0].id;
 
     // título del album
     tituloAlbum.innerText = title;
@@ -51,9 +53,10 @@ fetch(urlDetalle)
     elAlbum.src = img;
     elAlbum.alt = title;
     // nombre artista
-    nombreArtista.innerHTML = `<a class="decorationTrack" href="">${artista}</a>`
+    nombreArtista.innerHTML = `<a class="decorationTrack" href="detail-artist.html?id=${idArtist}">${artista}</a>`;
     // nombre del genero
-    nombreGenero.innerText = genero;
+    nombreGenero.innerHTML = `<a class="decorationTrack" href="detail-genres.html?id=${idGenero}&name=${genero}">${genero}</a>`;
+
     // fecha de estreno album
     fechaEstreno.innerHTML = `<p> Publicado el ${estreno}</p>`;
     // Temas del disco
