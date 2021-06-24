@@ -42,8 +42,10 @@ window.addEventListener('load',function(){
       e.preventDefault();
       if (buscador.value == ''){
           parrafo.innerText = 'El campo esta vacío';
+          parrafo.style.display = 'block';
       } else if (buscador.value.length<3){
           parrafo.innerText = 'Escribe al menos 3 caracteres';
+          parrafo.style.display = 'block';
       }else{
           this.submit();
       }
@@ -51,6 +53,8 @@ window.addEventListener('load',function(){
 
   buscador.addEventListener('input', function(){
       parrafo.innerText = '';
+      parrafo.style.display='none';
   });
+
 
 })

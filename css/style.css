@@ -120,9 +120,14 @@ input{
 }
 
 span.mensaje{
-    color: rgb(255, 255, 255);
+    color: rgb(214, 193, 0);
     font-size: 50%;
-    min-width: 40%;
+    min-width: auto;
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0);
+    border: solid 1px rgb(214, 193, 0);
+    padding: 3px;
+    display: none;
 }
 
 button{
@@ -594,6 +599,10 @@ article.detailalbum h4 a{
     font-size: 10px;
 }
 
+img#gifCarga{
+    width: 100%;
+}
+
 @media (min-width: 720px) {
     body{width: 100%;}
     nav.menunav{height:60px; justify-content: flex-start;}
@@ -855,5 +864,18 @@ article.detailalbum h4 a{
 
     article.detailalbum h4 a{
         font-size: 20px;
+    }
+
+    img#gifCarga{
+        width: auto;
+        padding: auto;
+    }
+
+    span.mensaje{
+        font-size: 90%;
+        min-width: auto;
+        color: rgb(214, 193, 0);
+        margin-bottom: 0;
+        text-align: left;
     }
 }

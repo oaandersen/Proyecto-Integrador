@@ -112,8 +112,10 @@ fetch(urlDetalle)
         e.preventDefault();
         if (buscador.value == ''){
             parrafo.innerText = 'El campo esta vacío';
+            parrafo.style.display = 'block';
         } else if (buscador.value.length<3){
             parrafo.innerText = 'Escribe al menos 3 caracteres';
+            parrafo.style.display = 'block';
         }else{
             this.submit();
         }
@@ -121,7 +123,9 @@ fetch(urlDetalle)
 
     buscador.addEventListener('input', function(){
         parrafo.innerText = '';
+        parrafo.style.display='none';
     });
+
 })
 
 

@@ -13,29 +13,28 @@
 
 <body>
     <header>
-        <nav class="menunav">
+        <nav class="menunav" class="navcontent">
             <h2>M4F</h2>
-            <article class="navcontent">
 
-                <article id="toggle">
-                    <input type="checkbox" id="barras" value="" aria-checked="false">
-                    <label for="barras" class="boton"><i class="fas fa-bars"></i></label>
-                    <ul class="navigation">
-                        <li><a class="movimiento" href="index.html" class="decoration">HOME</a></li>
-                        <li><a href="playlist.html" class="decoration">PLAYLIST</a></li>
-                        <li><a href="genres.html" class="decoration">GÉNEROS</a></li>
-                    </ul>
-                </article>
 
-                <article class="busqcontain">
-                    <span class="mensaje"></span>
-                    <form class="form-busq" action="search-results.html" method="GET">
-                        <input class="buscador" type="text" name="q" value="" placeholder="buscar">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                    
-                </article>
+            <article id="toggle">
+                <input type="checkbox" id="barras" value="" aria-checked="false">
+                <label for="barras" class="boton"><i class="fas fa-bars"></i></label>
+                <ul class="navigation">
+                    <li><a class="movimiento" href="index.html" class="decoration">HOME</a></li>
+                    <li><a href="playlist.html" class="decoration">PLAYLIST</a></li>
+                    <li><a href="genres.html" class="decoration">GÉNEROS</a></li>
+                </ul>
             </article>
+
+            <article class="busqcontain">
+                
+                <form class="form-busq" action="search-results.html" method="GET">
+                    <input class="buscador" type="text" name="q" value="" placeholder="buscar">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </article>
+            <span class="mensaje"></span>
         </nav>
     </header>
     <main>

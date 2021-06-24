@@ -23,7 +23,8 @@ window.addEventListener('load',function(){
     let botonAlbumes = document.querySelector('#albumes');
     let sectionAlbum = document.querySelector('#sectionAlbum');
     let sectionArtist = document.querySelector('#sectionArtist');
-    let sectionTrack = document.querySelector('#sectionTrack')
+    let sectionTrack = document.querySelector('#sectionTrack');
+    let gifCarga = document.querySelector('#gifCarga');
 
 
     //ARTISTAS
@@ -52,6 +53,9 @@ window.addEventListener('load',function(){
             if (results.length===0){
             noResultadosArtist.style.display="block"
             }      
+        })
+        .then(function(){
+            gifCarga.style.display = 'none';
         })
         .catch(function(error){
             console.log(error);
@@ -86,7 +90,10 @@ window.addEventListener('load',function(){
                 if (results.length===0){
                     noResultadosTrack.style.display="block";
                     }       
-            })
+        })
+        .then(function(){
+                gifCarga.style.display = 'none';
+        })
         .catch(function(error){
                 console.log(error);
             })
@@ -120,6 +127,9 @@ window.addEventListener('load',function(){
                 if (results.length===0){
                     noResultadosAlbum.style.display="block"
                     }      
+            })
+            .then(function(){
+                gifCarga.style.display = 'none';
             })
             .catch(function(error){
                 console.log(error);
@@ -216,8 +226,10 @@ window.addEventListener('load',function(){
         e.preventDefault();
         if (buscador.value == ''){
             parrafo.innerText = 'El campo esta vacío';
+            parrafo.style.display = 'block';
         } else if (buscador.value.length<3){
             parrafo.innerText = 'Escribe al menos 3 caracteres';
+            parrafo.style.display = 'block';
         }else{
             this.submit();
         }
@@ -225,5 +237,7 @@ window.addEventListener('load',function(){
 
     buscador.addEventListener('input', function(){
         parrafo.innerText = '';
+        parrafo.style.display='none';
     });
+
 })
