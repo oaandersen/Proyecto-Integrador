@@ -4,9 +4,6 @@ window.addEventListener('load',function(){
 let searchResults = new URLSearchParams(location.search);
 // let codigo = search_results.get('id');
 
-// <article>
-let articleTrack = document.querySelector('article.detailsongs');
-
 // título del track
 let tituloTrack = document.querySelector('h1 a');
 

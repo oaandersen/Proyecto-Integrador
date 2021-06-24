@@ -51,7 +51,7 @@ window.addEventListener('load',function(){
             }
           
             if (results.length===0){
-            noResultadosArtist.style.display="block"
+            noResultadosArtist.style.display="block";
             }      
         })
         .then(function(){
