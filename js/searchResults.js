@@ -17,7 +17,16 @@ window.addEventListener('load',function(){
     let noResultadosArtist = document.querySelector("section.ulResultadosArtist h3.noResultados");
     let noResultadosTrack = document.querySelector("section.ulResultadosTracks h3.noResultados");
     tituloBusqueda.innerText +=  ` "${busqueda}"`;
+    let botonTodo = document.querySelector('#todo');
+    let botonTracks = document.querySelector('#tracks');
+    let botonArtistas = document.querySelector('#artistas');
+    let botonAlbumes = document.querySelector('#albumes');
+    let sectionAlbum = document.querySelector('#sectionAlbum');
+    let sectionArtist = document.querySelector('#sectionArtist');
+    let sectionTrack = document.querySelector('#sectionTrack')
 
+
+    //ARTISTAS
     fetch(proxy + apiBusqueda)
         .then(function(respuesta){
             console.log(respuesta);
@@ -53,7 +62,7 @@ window.addEventListener('load',function(){
      let ulResultadosTracks = document.querySelector('.ulResultadosTracks');
     let apiBusqueda1 = `https://api.deezer.com/search/track?q=${busqueda}`;
 
-
+    
     fetch(proxy + apiBusqueda1)
         .then(function(respuesta){
                 console.log(respuesta);
@@ -115,6 +124,88 @@ window.addEventListener('load',function(){
             .catch(function(error){
                 console.log(error);
             })
+
+    //TODO
+    botonTodo.addEventListener('click', function(e){
+        e.preventDefault();
+        sectionAlbum.style.display = 'block';
+        sectionArtist.style.display = 'block';
+        sectionTrack.style.display = 'block';
+
+        botonTodo.classList.add('botonSeleccionado');
+        botonTodo.classList.remove('decorationBoton');
+
+        botonTracks.classList.remove('botonSeleccionado');
+        botonTracks.classList.add('decorationBoton');
+
+        botonArtistas.classList.remove('botonSeleccionado');
+        botonArtistas.classList.add('decorationBoton');
+
+        botonAlbumes.classList.remove('botonSeleccionado');
+        botonAlbumes.classList.add('decorationBoton');
+    })
+
+
+
+    //SOLO TRACKS
+    botonTracks.addEventListener('click', function(e){
+        e.preventDefault();
+        sectionAlbum.style.display = 'none';
+        sectionArtist.style.display = 'none';
+        sectionTrack.style.display = 'block';
+
+        botonTracks.classList.add('botonSeleccionado');
+        botonTracks.classList.remove('decorationBoton');
+
+        botonArtistas.classList.remove('botonSeleccionado');
+        botonArtistas.classList.add('decorationBoton');
+
+        botonAlbumes.classList.remove('botonSeleccionado');
+        botonAlbumes.classList.add('decorationBoton');
+
+        botonTodo.classList.remove('botonSeleccionado');
+        botonTodo.classList.add('decorationBoton');
+    })
+
+    //SOLO ARTISTAS
+    botonArtistas.addEventListener('click', function(e){
+        e.preventDefault();
+        sectionAlbum.style.display = 'none';
+        sectionTrack.style.display = 'none';
+        sectionArtist.style.display = 'block';
+
+        botonArtistas.classList.add('botonSeleccionado');
+        botonArtistas.classList.remove('decorationBoton');
+
+        botonTracks.classList.remove('botonSeleccionado');
+        botonTracks.classList.add('decorationBoton');
+
+        botonAlbumes.classList.remove('botonSeleccionado');
+        botonAlbumes.classList.add('decorationBoton');
+
+        botonTodo.classList.remove('botonSeleccionado');
+        botonTodo.classList.add('decorationBoton');
+    })
+
+    //SOLO ALBUMES
+    botonAlbumes.addEventListener('click', function(e){
+        e.preventDefault();
+        sectionArtist.style.display = 'none';
+        sectionTrack.style.display = 'none';
+        sectionAlbum.style.display = 'block';
+
+        botonAlbumes.classList.add('botonSeleccionado');
+        botonAlbumes.classList.remove('decorationBoton');
+
+        botonTracks.classList.remove('botonSeleccionado');
+        botonTracks.classList.add('decorationBoton');
+
+        botonArtistas.classList.remove('botonSeleccionado');
+        botonArtistas.classList.add('decorationBoton');
+
+        botonTodo.classList.remove('botonSeleccionado');
+        botonTodo.classList.add('decorationBoton');
+    })
 
     //BUSCADOR
     let buscador = document.querySelector('.buscador');

@@ -560,6 +560,28 @@ article.generoArticle{
     color: rgb(214, 193, 0);
 }
 
+.decorationBoton{
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 50%;
+}
+
+.botonSeleccionado{
+    color: rgb(0, 0, 0);
+    border: solid 1px rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 50%;
+    background-color: rgb(255,255,255);
+    font-weight: 500;
+}
+
+.divBotones{
+    text-align: center;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
 @media (min-width: 720px) {
     body{width: 100%;}
     nav.menunav{height:60px; justify-content: flex-start;}
@@ -581,6 +603,7 @@ article.generoArticle{
         font-size: 200%;
         margin-right: 15%;
         padding: 10%;
+
     }
 
     form.form-busq button{
@@ -786,5 +809,13 @@ article.generoArticle{
 
     .articuloPlist{
         max-width: 48%;
+    }
+
+    .decorationBoton{
+        font-size: 100%;
+    }
+    
+    .botonSeleccionado{
+        font-size: 100%;
     }
 }
